@@ -2,3 +2,4 @@
 !.gitignore
 *.iml
 target
+dependency-reduced-pom.xml
