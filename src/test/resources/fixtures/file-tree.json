@@ -1,0 +1,26 @@
+{
+  "values": [
+    ".gitignore",
+    "README.md",
+    "build.gradle",
+    "foo-app/build.gradle",
+    "foo-app/gradle.properties",
+    "foo-app/src/main/java/com/example/foo/App.java",
+    "foo-app/src/test/java/com/example/foo/AppTest.java",
+    "foo-core/build.gradle",
+    "foo-core/gradle.properties",
+    "foo-core/src/main/java/com/example/foo/Core.java",
+    "foo-core/src/test/java/com/example/foo/CoreTest.java",
+    "gradle.properties",
+    "gradle/wrapper/gradle-wrapper.jar",
+    "gradle/wrapper/gradle-wrapper.properties",
+    "gradlew",
+    "gradlew.bat",
+    "settings.gradle"
+  ],
+  "size": 17,
+  "isLastPage": true,
+  "start": 0,
+  "limit": 25,
+  "nextPageStart": null
+}

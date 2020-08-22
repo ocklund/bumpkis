@@ -1,0 +1,67 @@
+{
+  "eventKey": "repo:refs_changed",
+  "date": "2019-12-11T18:37:30+0100",
+  "actor": {
+    "name": "admin",
+    "emailAddress": "admin@example.com",
+    "id": 1,
+    "displayName": "Administrator",
+    "active": true,
+    "slug": "admin",
+    "type": "NORMAL",
+    "links": {
+      "self": [{
+        "href": "http://localhost:7990/bitbucket/users/admin"
+      }]
+    }
+  },
+  "repository": {
+    "slug": "bar",
+    "id": 13,
+    "name": "bar",
+    "description": null,
+    "scmId": "git",
+    "state": "AVAILABLE",
+    "statusMessage": "Available",
+    "forkable": true,
+    "project": {
+      "key": "PROJECT_1",
+      "id": 1,
+      "name": "Project 1",
+      "description": "Default configuration project #1",
+      "public": false,
+      "type": "NORMAL",
+      "links": {
+        "self": [{
+          "href": "http://localhost:7990/bitbucket/projects/PROJECT_1"
+        }]
+      }
+    },
+    "public": false,
+    "links": {
+      "clone": [{
+        "href": "http://localhost:7990/bitbucket/scm/project_1/bar.git",
+        "name": "http"
+      }, {
+        "href": "ssh://git@localhost:7999/project_1/bar.git",
+        "name": "ssh"
+      }],
+      "self": [{
+        "href": "http://localhost:7990/bitbucket/projects/PROJECT_1/repos/bar/browse"
+      }]
+    }
+  },
+  "changes": [{
+    "ref": {
+      "id": "refs/tags/1.0.3",
+      "displayId": "1.0.3",
+      "type": "TAG",
+      "latestCommit": null,
+      "repository": null
+    },
+    "refId": "refs/tags/1.0.3",
+    "fromHash": "0000000000000000000000000000000000000000",
+    "toHash": "6ff7e4a9a25839e52d1cfda295b0c110478608f4",
+    "type": "ADD"
+  }]
+}

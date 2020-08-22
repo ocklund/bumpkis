@@ -1,0 +1,18 @@
+logging:
+  level: INFO
+  loggers:
+    com.ocklund: INFO
+httpClient:
+  timeout: 1 second
+  connectionTimeout: 1 second
+database:
+  driverClass: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/bumpkis
+  user: ${BUMPKIS_DB_USER:-bumpkis}
+bitbucket:
+  scheme: http
+  host: localhost
+  port: 7990
+  user: ${BITBUCKET_USER:-admin}
+  password: ${BITBUCKET_PASS:-admin}
+

@@ -1,0 +1,39 @@
+{
+  "id": "b3e33e4e095ed8d8194665b3fc5a54cb3bcc8922",
+  "displayId": "b3e33e4e095",
+  "author": {
+    "name": "admin",
+    "emailAddress": "admin@example.com",
+    "id": 1,
+    "displayName": "Administrator",
+    "active": true,
+    "slug": "admin",
+    "type": "NORMAL",
+    "links": {
+      "self": [{
+        "href": "http://localhost:7990/bitbucket/users/admin"
+      }]
+    }
+  },
+  "authorTimestamp": 1578247898000,
+  "committer": {
+    "name": "admin",
+    "emailAddress": "admin@example.com",
+    "id": 1,
+    "displayName": "Administrator",
+    "active": true,
+    "slug": "admin",
+    "type": "NORMAL",
+    "links": {
+      "self": [{
+        "href": "http://localhost:7990/bitbucket/users/admin"
+      }]
+    }
+  },
+  "committerTimestamp": 1578247898000,
+  "message": "Bump version for dependency",
+  "parents": [{
+    "id": "c05e180ce29315644eb3939a7555fac815609136",
+    "displayId": "c05e180ce29"
+  }]
+}

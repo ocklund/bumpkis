@@ -1,0 +1,29 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.researchgate.release' version '2.6.0'
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+group = 'com.example.baz'
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+version = '1.0.0-SNAPSHOT'
+group = 'com.example.foo'
+
+dependencies {
+    implementation 'com.google.guava:guava:28.0-jre'
+    implementation 'com.example.bar:bar:1.0.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.1'
+}
+
+application {
+    mainClassName = 'com.example.foo.App'
+}
+
+test {
+    useJUnitPlatform()
+}

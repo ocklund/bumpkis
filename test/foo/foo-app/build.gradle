@@ -1,0 +1,11 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClassName = 'com.example.foo.App'
+}
+
+dependencies {
+    implementation 'com.example.bar:bar:1.0.2'
+}

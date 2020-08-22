@@ -1,0 +1,9 @@
+{
+  "errors": [{
+    "context": null,
+    "message": "'build.gradle' could not be edited because it has been changed on the 'SimpleBranch{id=refs/heads/auto/bump-bar-version-to-1-0-24, displayId=auto/bump-bar-version-to-1-0-24, latestCommit=d629031ffb9e7c969f8f966cf601a7aaafa6ea9e, default=false}' branch.",
+    "exceptionName": "com.atlassian.bitbucket.content.FileOutOfDateException",
+    "currentVersion": -1,
+    "expectedVersion": -1
+  }]
+}

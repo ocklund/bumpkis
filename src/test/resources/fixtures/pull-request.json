@@ -1,0 +1,123 @@
+{
+  "id": 5,
+  "version": 0,
+  "title": "[AUTO] Bump version to com.example.bar:bar:1.0.38",
+  "description": "Automatic bump of dependency version to com.example.bar:bar:1.0.38",
+  "state": "OPEN",
+  "open": true,
+  "closed": false,
+  "createdDate": 1578249030483,
+  "updatedDate": 1578249030483,
+  "closedDate": 0,
+  "fromRef": {
+    "id": "refs/heads/auto/bump-bar-version-to-1-0-38",
+    "displayId": "auto/bump-bar-version-to-1-0-38",
+    "type": null,
+    "latestCommit": "48179a4407bc1dd34ce72f27c481ace504fa3794",
+    "repository": {
+      "slug": "foo",
+      "id": 12,
+      "name": "foo",
+      "description": null,
+      "scmId": "git",
+      "state": "AVAILABLE",
+      "statusMessage": "Available",
+      "forkable": true,
+      "project": {
+        "key": "PROJECT_1",
+        "id": 1,
+        "name": "Project 1",
+        "description": "Default configuration project #1",
+        "public": false,
+        "type": "NORMAL",
+        "links": {
+          "self": [{
+            "href": "http://localhost:7990/bitbucket/projects/PROJECT_1"
+          }]
+        }
+      },
+      "public": false,
+      "links": {
+        "clone": [{
+          "href": "ssh://git@localhost:7999/project_1/foo.git",
+          "name": "ssh"
+        }, {
+          "href": "http://localhost:7990/bitbucket/scm/project_1/foo.git",
+          "name": "http"
+        }],
+        "self": [{
+          "href": "http://localhost:7990/bitbucket/projects/PROJECT_1/repos/foo/browse"
+        }]
+      }
+    }
+  },
+  "toRef": {
+    "id": "refs/heads/master",
+    "displayId": "master",
+    "type": null,
+    "latestCommit": "c05e180ce29315644eb3939a7555fac815609136",
+    "repository": {
+      "slug": "foo",
+      "id": 12,
+      "name": "foo",
+      "description": null,
+      "scmId": "git",
+      "state": "AVAILABLE",
+      "statusMessage": "Available",
+      "forkable": true,
+      "project": {
+        "key": "PROJECT_1",
+        "id": 1,
+        "name": "Project 1",
+        "description": "Default configuration project #1",
+        "public": false,
+        "type": "NORMAL",
+        "links": {
+          "self": [{
+            "href": "http://localhost:7990/bitbucket/projects/PROJECT_1"
+          }]
+        }
+      },
+      "public": false,
+      "links": {
+        "clone": [{
+          "href": "ssh://git@localhost:7999/project_1/foo.git",
+          "name": "ssh"
+        }, {
+          "href": "http://localhost:7990/bitbucket/scm/project_1/foo.git",
+          "name": "http"
+        }],
+        "self": [{
+          "href": "http://localhost:7990/bitbucket/projects/PROJECT_1/repos/foo/browse"
+        }]
+      }
+    }
+  },
+  "locked": false,
+  "author": {
+    "user": {
+      "name": "admin",
+      "emailAddress": "admin@example.com",
+      "id": 1,
+      "displayName": "Administrator",
+      "active": true,
+      "slug": "admin",
+      "type": "NORMAL",
+      "links": {
+        "self": [{
+          "href": "http://localhost:7990/bitbucket/users/admin"
+        }]
+      }
+    },
+    "role": "AUTHOR",
+    "approved": false,
+    "status": "UNAPPROVED"
+  },
+  "reviewers": [],
+  "participants": [],
+  "links": {
+    "self": [{
+      "href": "http://localhost:7990/bitbucket/projects/PROJECT_1/repos/foo/pull-requests/5"
+    }]
+  }
+}
