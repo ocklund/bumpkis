@@ -1,6 +1,7 @@
 # Bumpkis
 
-Automatically bumps the version of an internal dependency in your Gradle project when there's a new release of that dependency.
+Automatically bumps the version of an internal dependency in your Gradle project in Bitbucket when there's a new
+release of that dependency.
 
 This is how it works:
 - When your project merges a pull request, the service is notified via a webhook, reads your dependencies from your
@@ -25,14 +26,6 @@ atlas-run-standalone --product bitbucket
 ```
 - Make sure your local Bitbucket is running on http://localhost:7990/bitbucket (login as admin/admin)
 
-## How to start the Bumpkis application
-
-- Run `mvn clean package` to build your application
-- Start application with:
-```
-java --enable-preview -jar target/bumpkis-1.0.0-SNAPSHOT.jar server config.yml
-```
-
 ## How to set up database
 
 - Install with Homebrew, and start:
@@ -47,22 +40,34 @@ pg_ctl -D /usr/local/var/postgres start
 createuser bumpkis -s
 createdb bumpkis
 ```
+- Create tables in the database with the Dropwizard migration command:
+```
+java --enable-preview -jar target/bumpkis-1.0.0-SNAPSHOT.jar db migrate config.yml
+```
 
-## How to set up test repos
+## How to start the Bumpkis application
 
-- Create a repo named `foo` in you local Bitbucket dashboard and a page with instructions will be shown
-- Navigate to the test project `test/foo` in this repo and follow the instructions under the title
+- Run `mvn clean package` to build your application
+- Start application with:
+```
+java --enable-preview -jar target/bumpkis-1.0.0-SNAPSHOT.jar server config.yml
+```
+
+## How to set up demo repos
+
+- Create a repo named `foo` in you local Bitbucket dashboard, and a page with instructions will be shown
+- Navigate to the demo project `demo/foo` in this repo and follow the instructions under the title
   **My code is ready to be pushed** on the Bitbucket page
-- Create a repo named `bar` and a repo named `baz` the same way as you did for `foo`
+- Create a repo named `bar` the same way as you did for `foo`
 - Create a webhook in Bitbucket in each repo in the Repository Settings (cog icon) with name `bitbucket` and URL 
   `http://localhost:8080/bitbucket`. Make sure the events `Push` and `Merged` are checked for the webhook
  
-## Running a test
+## Running a demo
 
-- Make sure you have a test setup as described in **How to set up test repos** above
+- Make sure you have a demo setup as described in **How to set up demo repos** above
 - Make sure the database is set up and running as described in **How to set up database** above
-- Start the Bumper app as described in **How to start the application** above
-- Create and merge a pull request in the repo `foo` so that it registers in the Bumper database:
+- Start the Bumpkis app as described in **How to start the application** above
+- Create and merge a pull request in the repo `foo` so that it registers in the Bumpkis database:
 ```
 git checkout -b dummy
 git commit -m "Empty" --allow-empty
@@ -75,10 +80,10 @@ open http://localhost:7990/bitbucket/projects/PROJECT_1/repos/foo/pull-requests?
 - Create and merge the pull request in Bitbucket, which will be visible in the Bumper log
 - Now create a release in the library repo `bar` that `foo` depends on:
 ```
-git pull;git commit -m "Empty" --allow-empty;git push origin master;gw release -Prelease.useAutomaticVersion=true
+git pull;git commit -m "Empty" --allow-empty;git push origin master;./gradlew release -Prelease.useAutomaticVersion=true
 ```
 - How Bumper processes the events from Bitbucket will be visible in the Bumper log
-- There should now exist a pull request in Bitbucket in repo `foo` for bumping the dependency `bar`, titled
-  "[AUTO] Bump version to com.example.bar:bar:<version>"
+- There should now exist a pull request in the [Bitbucket dashboard](http://localhost:7990/bitbucket/dashboard) for 
+bumping the dependency `bar`, titled "[AUTO] Bump version to com.example.bar:bar:<version>"
 
-Note to self: After testing, remember that any changes in the test repos should not be pushed to this repo
+**Note to self:** After testing, remember that any changes in the demo repos should not be pushed to this repo

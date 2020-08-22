@@ -3,8 +3,8 @@ logging:
   loggers:
     com.ocklund: INFO
 httpClient:
-  timeout: 1 second
-  connectionTimeout: 1 second
+  timeout: 3 seconds
+  connectionTimeout: 3 seconds
 database:
   driverClass: org.postgresql.Driver
   url: jdbc:postgresql://localhost:5432/bumpkis
