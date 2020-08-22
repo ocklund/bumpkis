@@ -85,5 +85,3 @@ git pull;git commit -m "Empty" --allow-empty;git push origin master;./gradlew re
 - How Bumper processes the events from Bitbucket will be visible in the Bumper log
 - There should now exist a pull request in the [Bitbucket dashboard](http://localhost:7990/bitbucket/dashboard) for 
 bumping the dependency `bar`, titled "[AUTO] Bump version to com.example.bar:bar:<version>"
-
-**Note to self:** After testing, remember that any changes in the demo repos should not be pushed to this repo
