@@ -11,7 +11,7 @@ This is how it works:
   
 ## Requirements
 
-- JDK 14 Preview or later
+- JDK 8 or later
 - Maven 3.6.3 or later
 - Postgres 12.2 or later
 - [Atlassian Plugin SDK](https://developer.atlassian.com/server/framework/atlassian-sdk/atlas-run-standalone/)
@@ -42,7 +42,7 @@ createdb bumpkis
 ```
 - Create tables in the database with the Dropwizard migration command:
 ```
-java --enable-preview -jar target/bumpkis-1.0.0-SNAPSHOT.jar db migrate config.yml
+java -jar target/bumpkis-1.0.0-SNAPSHOT.jar db migrate config.yml
 ```
 
 ## How to start the Bumpkis application
@@ -50,7 +50,7 @@ java --enable-preview -jar target/bumpkis-1.0.0-SNAPSHOT.jar db migrate config.y
 - Run `mvn clean package` to build your application
 - Start application with:
 ```
-java --enable-preview -jar target/bumpkis-1.0.0-SNAPSHOT.jar server config.yml
+java -jar target/bumpkis-1.0.0-SNAPSHOT.jar server config.yml
 ```
 
 ## How to set up demo repos

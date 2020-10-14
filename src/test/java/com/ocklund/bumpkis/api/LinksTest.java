@@ -10,8 +10,7 @@ public class LinksTest {
 
     @Test
     public void shouldAllowMissingCloneProperty() {
-        String expected = """
-                {"self":[{"foo":"bar"}]}""";
+        String expected = "{\"self\":[{\"foo\":\"bar\"}]}";
         Links links = new Links(null, singletonList(singletonMap("foo", "bar")));
         assertEquals(expected, links.toString());
     }

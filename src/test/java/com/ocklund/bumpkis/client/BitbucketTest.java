@@ -21,45 +21,8 @@ public class BitbucketTest {
 
     private BitbucketConfiguration bitbucketConfiguration;
     private HttpClient httpClient;
-    private String createBranchResponse = """
-        {
-            "id":"refs/heads/master",
-            "displayId": "master",
-            "type": "BRANCH",
-            "latestCommit": "8d51122def5632836d1cb1026e879069e10a1e13",
-            "latestChangeset": "8d51122def5632836d1cb1026e879069e10a1e13",
-            "isDefault": true
-        }
-        """;
-
-    private String readFileTreeResponse = """
-        {
-          "values": [
-            ".gitignore",
-            "README.md",
-            "build.gradle",
-            "foo-app/build.gradle",
-            "foo-app/gradle.properties",
-            "foo-app/src/main/java/com/example/foo/App.java",
-            "foo-app/src/test/java/com/example/foo/AppTest.java",
-            "foo-core/build.gradle",
-            "foo-core/gradle.properties",
-            "foo-core/src/main/java/com/example/foo/Core.java",
-            "foo-core/src/test/java/com/example/foo/CoreTest.java",
-            "gradle.properties",
-            "gradle/wrapper/gradle-wrapper.jar",
-            "gradle/wrapper/gradle-wrapper.properties",
-            "gradlew",
-            "gradlew.bat",
-            "settings.gradle"
-          ],
-          "size": 17,
-          "isLastPage": true,
-          "start": 0,
-          "limit": 25,
-          "nextPageStart": null
-        }
-        """;
+    private String createBranchResponse = "{\"id\":\"refs/heads/master\",\"displayId\":\"master\",\"type\":\"BRANCH\",\"latestCommit\":\"8d51122def5632836d1cb1026e879069e10a1e13\",\"latestChangeset\":\"8d51122def5632836d1cb1026e879069e10a1e13\",\"isDefault\":true}";
+    private String readFileTreeResponse = "{\"values\":[\".gitignore\",\"README.md\",\"build.gradle\",\"foo-app/build.gradle\",\"foo-app/gradle.properties\",\"foo-app/src/main/java/com/example/foo/App.java\",\"foo-app/src/test/java/com/example/foo/AppTest.java\",\"foo-core/build.gradle\",\"foo-core/gradle.properties\",\"foo-core/src/main/java/com/example/foo/Core.java\",\"foo-core/src/test/java/com/example/foo/CoreTest.java\",\"gradle.properties\",\"gradle/wrapper/gradle-wrapper.jar\",\"gradle/wrapper/gradle-wrapper.properties\",\"gradlew\",\"gradlew.bat\",\"settings.gradle\"],\"size\":17,\"isLastPage\":true,\"start\":0,\"limit\":25,\"nextPageStart\":null}";
 
     @Before
     public void setUp() throws IOException {
